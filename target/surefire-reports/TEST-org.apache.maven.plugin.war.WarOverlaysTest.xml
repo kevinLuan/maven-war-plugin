@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="10" time="0.945" errors="0" skipped="0" tests="11" name="org.apache.maven.plugin.war.WarOverlaysTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
+    <property name="java.vm.version" value="20.65-b04-462"/>
+    <property name="awt.nativeDoubleBuffering" value="true"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="mrj.build" value="11M4609"/>
+    <property name="java.vm.vendor" value="Apple Inc."/>
+    <property name="java.vendor.url" value="http://www.apple.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/kevin/workspace/maven-war-plugin"/>
+    <property name="java.runtime.version" value="1.6.0_65-b14-462-11M4609"/>
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/share/java/apache-maven-3.1.1/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="EUC_CN"/>
+    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.9.1"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/var/root"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="EUC_CN"/>
+    <property name="user.name" value="root"/>
+    <property name="java.class.path" value="/usr/share/java/apache-maven-3.1.1/boot/plexus-classworlds-2.5.1.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="apple.awt.CToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_65"/>
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext"/>
+    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar"/>
+    <property name="java.vendor" value="Apple Inc."/>
+    <property name="maven.home" value="/usr/share/java/apache-maven-3.1.1"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="mrj.version" value="1070.1.6.0_65-462"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="0.3" classname="org.apache.maven.plugin.war.WarOverlaysTest" name="testDefaultOverlays">
+    <failure message="source file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/default-overlays/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/default-overlays/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.AbstractWarExplodedMojoTest.assertDefaultContent(AbstractWarExplodedMojoTest.java:161)
+	at org.apache.maven.plugin.war.WarOverlaysTest.testDefaultOverlays(WarOverlaysTest.java:139)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Building jar: /Users/kevin/workspace/maven-war-plugin/target/test-overlays/overlay-full-1.war
+[INFO] Building jar: /Users/kevin/workspace/maven-war-plugin/target/test-overlays/overlay-full-2.war
+[INFO] Building jar: /Users/kevin/workspace/maven-war-plugin/target/test-overlays/overlay-full-3.war
+[INFO] Building jar: /Users/kevin/workspace/maven-war-plugin/target/test-overlays/overlay-one.war
+[INFO] Building jar: /Users/kevin/workspace/maven-war-plugin/target/test-overlays/overlay-two.war
+[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/default-overlays]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/default-overlays-test-data/source]
+[INFO] Processing overlay [ id wartests:overlay-one]
+[INFO] Processing overlay [ id wartests:overlay-two]
+[INFO] Webapp assembled in [13 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.091" classname="org.apache.maven.plugin.war.WarOverlaysTest" name="testScenarioOneWithDefaulSettings">
+    <failure message="overlay file not found - /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-default-settings/jsp/a.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: overlay file not found - /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-default-settings/jsp/a.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.AbstractWarExplodedMojoTest.assertCustomContent(AbstractWarExplodedMojoTest.java:205)
+	at org.apache.maven.plugin.war.WarOverlaysTest.assertScenariOne(WarOverlaysTest.java:281)
+	at org.apache.maven.plugin.war.WarOverlaysTest.testScenarioOneWithDefaulSettings(WarOverlaysTest.java:187)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-default-settings]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-default-settings-test-data/source]
+[INFO] Processing overlay [ id wartests:overlay-full-1]
+[INFO] Processing overlay [ id wartests:overlay-full-2]
+[INFO] Processing overlay [ id wartests:overlay-full-3]
+[INFO] Webapp assembled in [32 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.028" classname="org.apache.maven.plugin.war.WarOverlaysTest" name="testEnvironment"/>
+  <testcase time="0.047" classname="org.apache.maven.plugin.war.WarOverlaysTest" name="testDefaultOverlay">
+    <failure message="source file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/default-overlay/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/default-overlay/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.AbstractWarExplodedMojoTest.assertDefaultContent(AbstractWarExplodedMojoTest.java:161)
+	at org.apache.maven.plugin.war.WarOverlaysTest.testDefaultOverlay(WarOverlaysTest.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/default-overlay]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/default-overlay-test-data/source]
+[INFO] Processing overlay [ id wartests:overlay-one]
+[INFO] Webapp assembled in [4 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.061" classname="org.apache.maven.plugin.war.WarOverlaysTest" name="testOverlaysIncludesExcludesWithMultipleDefinitions2">
+    <failure message="overlay file not found - /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/overlays-includes-excludes-multiple-defs2/jsp/a.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: overlay file not found - /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/overlays-includes-excludes-multiple-defs2/jsp/a.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.AbstractWarExplodedMojoTest.assertCustomContent(AbstractWarExplodedMojoTest.java:205)
+	at org.apache.maven.plugin.war.WarOverlaysTest.testOverlaysIncludesExcludesWithMultipleDefinitions2(WarOverlaysTest.java:422)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/overlays-includes-excludes-multiple-defs2]
+[INFO] Processing overlay [ id wartests:overlay-full-3]
+[INFO] Processing overlay [ id wartests:overlay-full-1]
+[INFO] Processing overlay [ id wartests:overlay-full-3]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/overlays-includes-excludes-multiple-defs2-test-data/source]
+[INFO] Processing overlay [ id wartests:overlay-full-2]
+[INFO] Webapp assembled in [33 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.035" classname="org.apache.maven.plugin.war.WarOverlaysTest" name="testNoOverlay">
+    <failure message="source file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/no-overlay/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/no-overlay/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.AbstractWarExplodedMojoTest.assertDefaultContent(AbstractWarExplodedMojoTest.java:161)
+	at org.apache.maven.plugin.war.WarOverlaysTest.testNoOverlay(WarOverlaysTest.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/no-overlay]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/no-overlay-test-data/source]
+[INFO] Webapp assembled in [2 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.135" classname="org.apache.maven.plugin.war.WarOverlaysTest" name="testCacheWithUpdatedOverlay">
+    <failure message="source file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-updated-overlay/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-updated-overlay/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.AbstractWarExplodedMojoTest.assertDefaultContent(AbstractWarExplodedMojoTest.java:161)
+	at org.apache.maven.plugin.war.WarOverlaysTest.testCacheWithUpdatedOverlay(WarOverlaysTest.java:486)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-updated-overlay]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-updated-overlay-test-data/source]
+[INFO] Processing overlay [ id wartests:overlay-one]
+[INFO] Processing overlay [ id wartests:overlay-two]
+[INFO] Webapp assembled in [17 msecs]
+[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-updated-overlay]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-updated-overlay-test-data/source]
+[INFO] Processing overlay [ id wartests:overlay-two]
+[INFO] File [index.jsp] belonged to overlay [wartests:overlay-one] so it will be overwritten.
+[INFO] File [WEB-INF/web.xml] belonged to overlay [wartests:overlay-one] so it will be overwritten.
+[INFO] Processing overlay [ id wartests:overlay-one]
+[INFO] Webapp assembled in [5 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.07" classname="org.apache.maven.plugin.war.WarOverlaysTest" name="testScenarioOneWithOverlaySettings">
+    <failure message="overlay file not found - /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-overlay-settings/jsp/a.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: overlay file not found - /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-overlay-settings/jsp/a.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.AbstractWarExplodedMojoTest.assertCustomContent(AbstractWarExplodedMojoTest.java:205)
+	at org.apache.maven.plugin.war.WarOverlaysTest.assertScenariOne(WarOverlaysTest.java:281)
+	at org.apache.maven.plugin.war.WarOverlaysTest.testScenarioOneWithOverlaySettings(WarOverlaysTest.java:222)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-overlay-settings]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-overlay-settings-test-data/source]
+[INFO] Processing overlay [ id wartests:overlay-full-1]
+[INFO] Processing overlay [ id wartests:overlay-full-2]
+[INFO] Processing overlay [ id wartests:overlay-full-3]
+[INFO] Webapp assembled in [35 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.056" classname="org.apache.maven.plugin.war.WarOverlaysTest" name="testScenarioOneWithFullSettings">
+    <failure message="overlay file not found - /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-full-settings/jsp/a.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: overlay file not found - /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-full-settings/jsp/a.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.AbstractWarExplodedMojoTest.assertCustomContent(AbstractWarExplodedMojoTest.java:205)
+	at org.apache.maven.plugin.war.WarOverlaysTest.assertScenariOne(WarOverlaysTest.java:281)
+	at org.apache.maven.plugin.war.WarOverlaysTest.testScenarioOneWithFullSettings(WarOverlaysTest.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-full-settings]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/scenario-one-full-settings-test-data/source]
+[INFO] Processing overlay [ id wartests:overlay-full-1]
+[INFO] Processing overlay [ id wartests:overlay-full-2]
+[INFO] Processing overlay [ id wartests:overlay-full-3]
+[INFO] Webapp assembled in [27 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.073" classname="org.apache.maven.plugin.war.WarOverlaysTest" name="testOverlaysIncludesExcludesWithMultipleDefinitions">
+    <failure message="overlay file not found - /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/overlays-includes-excludes-multiple-defs/jsp/a.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: overlay file not found - /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/overlays-includes-excludes-multiple-defs/jsp/a.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.AbstractWarExplodedMojoTest.assertCustomContent(AbstractWarExplodedMojoTest.java:205)
+	at org.apache.maven.plugin.war.WarOverlaysTest.testOverlaysIncludesExcludesWithMultipleDefinitions(WarOverlaysTest.java:352)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/overlays-includes-excludes-multiple-defs]
+[INFO] Processing overlay [ id wartests:overlay-full-3]
+[INFO] Processing overlay [ id wartests:overlay-full-1]
+[INFO] Processing overlay [ id wartests:overlay-full-3]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/overlays-includes-excludes-multiple-defs-test-data/source]
+[INFO] Processing overlay [ id wartests:overlay-full-2]
+[INFO] Webapp assembled in [33 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.049" classname="org.apache.maven.plugin.war.WarOverlaysTest" name="testCacheWithRemovedOverlay">
+    <failure message="source file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-removed-overlay/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-removed-overlay/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.AbstractWarExplodedMojoTest.assertDefaultContent(AbstractWarExplodedMojoTest.java:161)
+	at org.apache.maven.plugin.war.WarOverlaysTest.testCacheWithRemovedOverlay(WarOverlaysTest.java:542)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-removed-overlay]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-removed-overlay-test-data/source]
+[INFO] Processing overlay [ id wartests:overlay-one]
+[INFO] Processing overlay [ id wartests:overlay-two]
+[INFO] Webapp assembled in [18 msecs]
+[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-removed-overlay]
+[WARNING] Dependency [Dependency {groupId=wartests, artifactId=overlay-one, version=0.0-Test, type=war}] has been removed from the project. If it was included in the build as an overlay, consider cleaning the target directory of the project (mvn clean)
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/waroverlays/cache-removed-overlay-test-data/source]
+[INFO] Processing overlay [ id wartests:overlay-two]
+[WARNING] File [index.jsp] belonged to overlay [wartests:overlay-one] which does not exist anymore in the current project. It is recommended to invoke clean if the dependencies of the project changed.
+[WARNING] File [WEB-INF/web.xml] belonged to overlay [wartests:overlay-one] which does not exist anymore in the current project. It is recommended to invoke clean if the dependencies of the project changed.
+[INFO] Webapp assembled in [4 msecs]
+</system-out>
+  </testcase>
+</testsuite>

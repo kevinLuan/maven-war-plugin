@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="22" time="0.918" errors="0" skipped="0" tests="22" name="org.apache.maven.plugin.war.WarExplodedMojoTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
+    <property name="java.vm.version" value="20.65-b04-462"/>
+    <property name="awt.nativeDoubleBuffering" value="true"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="mrj.build" value="11M4609"/>
+    <property name="java.vm.vendor" value="Apple Inc."/>
+    <property name="java.vendor.url" value="http://www.apple.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/kevin/workspace/maven-war-plugin"/>
+    <property name="java.runtime.version" value="1.6.0_65-b14-462-11M4609"/>
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/share/java/apache-maven-3.1.1/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="EUC_CN"/>
+    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.9.1"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/var/root"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="EUC_CN"/>
+    <property name="user.name" value="root"/>
+    <property name="java.class.path" value="/usr/share/java/apache-maven-3.1.1/boot/plexus-classworlds-2.5.1.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="apple.awt.CToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_65"/>
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext"/>
+    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar"/>
+    <property name="java.vendor" value="Apple Inc."/>
+    <property name="maven.home" value="/usr/share/java/apache-maven-3.1.1"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="mrj.version" value="1070.1.6.0_65-462"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="0.04" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_WithCustomWebXML">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithCustomWebXML/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithCustomWebXML/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_WithCustomWebXML(WarExplodedMojoTest.java:173)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithCustomWebXML]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithCustomWebXML-test-data/source]
+[INFO] Webapp assembled in [2 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.044" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testSimpleExplodedWarWTargetPath">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/SimpleExplodedWar/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/SimpleExplodedWar/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testSimpleExplodedWarWTargetPath(WarExplodedMojoTest.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/SimpleExplodedWar]
+[INFO] Processing war project
+[INFO] Copying webapp webResources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/resources] to [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/SimpleExplodedWar]
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/SimpleExplodedWar-test-data/source]
+[INFO] Webapp assembled in [3 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.064" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_WithContainerConfigXML">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithContainerConfigXML/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithContainerConfigXML/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_WithContainerConfigXML(WarExplodedMojoTest.java:211)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithContainerConfigXML]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithContainerConfigXML-test-data/source]
+[INFO] Webapp assembled in [2 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.029" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWarWithOutputFileNameMapping">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithFileNameMapping/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithFileNameMapping/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWarWithOutputFileNameMapping(WarExplodedMojoTest.java:972)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithFileNameMapping]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithFileNameMapping-test-data/source]
+[INFO] Webapp assembled in [3 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.054" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWarMergeWarLocalFileOverride">
+    <failure message="file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/testExplodedWarMergeWarLocalFileOverride/org/sample/company/test.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: file not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/testExplodedWarMergeWarLocalFileOverride/org/sample/company/test.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWarMergeWarLocalFileOverride(WarExplodedMojoTest.java:300)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/testExplodedWarMergeWarLocalFileOverride]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/testExplodedWarMergeWarLocalFileOverride-test-data/source]
+[INFO] Processing overlay [ id wartests:simple]
+[INFO] Webapp assembled in [18 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.05" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_WithWarDependencyIncludeExclude">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithWarDependencyIncludeExclude/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithWarDependencyIncludeExclude/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_WithWarDependencyIncludeExclude(WarExplodedMojoTest.java:875)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithWarDependencyIncludeExclude]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithWarDependencyIncludeExclude-test-data/source]
+[INFO] Processing overlay [ id wartests:war-include-exclude]
+[INFO] Webapp assembled in [8 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.04" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_WithEJBClient">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithEJB/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithEJB/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_WithEJBClient(WarExplodedMojoTest.java:478)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithEJB]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithEJB-test-data/source]
+[INFO] Webapp assembled in [5 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.032" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testSimpleExplodedWar">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/SimpleExplodedWar/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/SimpleExplodedWar/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testSimpleExplodedWar(WarExplodedMojoTest.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/SimpleExplodedWar]
+[INFO] Processing war project
+[INFO] Copying webapp webResources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/SimpleExplodedWar-resources] to [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/SimpleExplodedWar]
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/SimpleExplodedWar-test-data/source]
+[INFO] Webapp assembled in [4 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.038" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWarWithSourceModificationCheck">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithSourceModificationCheck/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithSourceModificationCheck/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWarWithSourceModificationCheck(WarExplodedMojoTest.java:916)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithSourceModificationCheck]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithSourceModificationCheck-test-data/source]
+[INFO] Webapp assembled in [2 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.048" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWarWithOutputFileNameMappingAndDuplicateDependencies">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithFileNameMappingAndDuplicateDependencies/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithFileNameMappingAndDuplicateDependencies/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWarWithOutputFileNameMappingAndDuplicateDependencies(WarExplodedMojoTest.java:1017)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithFileNameMappingAndDuplicateDependencies]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithFileNameMappingAndDuplicateDependencies-test-data/source]
+[INFO] Webapp assembled in [7 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.034" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_WithSimpleExternalWARFile">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithSimpleExternalWARFile/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithSimpleExternalWARFile/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_WithSimpleExternalWARFile(WarExplodedMojoTest.java:257)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithSimpleExternalWARFile]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithSimpleExternalWARFile-test-data/source]
+[INFO] Processing overlay [ id wartests:simple]
+[INFO] Webapp assembled in [9 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.048" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_WithSourceIncludeExclude">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithSourceIncludeExclude/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithSourceIncludeExclude/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_WithSourceIncludeExclude(WarExplodedMojoTest.java:830)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithSourceIncludeExclude]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithSourceIncludeExclude-test-data/source]
+[INFO] Webapp assembled in [2 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.047" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWarWithAar">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithAar/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithAar/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWarWithAar(WarExplodedMojoTest.java:591)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithAar]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithAar-test-data/source]
+[INFO] Webapp assembled in [5 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.028" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWarWithJar">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithJar/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithJar/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWarWithJar(WarExplodedMojoTest.java:440)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithJar]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithJar-test-data/source]
+[INFO] Webapp assembled in [2 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.049" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWarWithMar">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithMar/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithMar/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWarWithMar(WarExplodedMojoTest.java:628)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithMar]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithMar-test-data/source]
+[INFO] Webapp assembled in [2 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.046" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWarWithXar">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithXar/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithXar/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWarWithXar(WarExplodedMojoTest.java:665)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithXar]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWarWithXar-test-data/source]
+[INFO] Webapp assembled in [7 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.028" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_WithEJB">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithEJB/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithEJB/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_WithEJB(WarExplodedMojoTest.java:404)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithEJB]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithEJB-test-data/source]
+[INFO] Webapp assembled in [3 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.054" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_WithPAR">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithPAR/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithPAR/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_WithPAR(WarExplodedMojoTest.java:554)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithPAR]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithPAR-test-data/source]
+[INFO] Webapp assembled in [6 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.045" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_WithTLD">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithTLD/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithTLD/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_WithTLD(WarExplodedMojoTest.java:516)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithTLD]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithTLD-test-data/source]
+[INFO] Webapp assembled in [2 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.038" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_DuplicateWithClassifier">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_DuplicateWithClassifier/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_DuplicateWithClassifier/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_DuplicateWithClassifier(WarExplodedMojoTest.java:762)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_DuplicateWithClassifier]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_DuplicateWithClassifier-test-data/source]
+[INFO] Webapp assembled in [4 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.025" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_WithClasses">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithClasses/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithClasses/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_WithClasses(WarExplodedMojoTest.java:798)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithClasses]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithClasses-test-data/source]
+[INFO] Webapp assembled in [2 msecs]
+</system-out>
+  </testcase>
+  <testcase time="0.037" classname="org.apache.maven.plugin.war.WarExplodedMojoTest" name="testExplodedWar_WithDuplicateDependencies">
+    <failure message="source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithDuplicateDependencies/pansit.jsp" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: source files not found: /Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithDuplicateDependencies/pansit.jsp
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)
+	at org.apache.maven.plugin.war.WarExplodedMojoTest.testExplodedWar_WithDuplicateDependencies(WarExplodedMojoTest.java:709)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[INFO] Exploding webapp
+[INFO] Assembling webapp [maven-war-plugin-test] in [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithDuplicateDependencies]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/kevin/workspace/maven-war-plugin/target/test-classes/unit/warexplodedmojo/test-dir/ExplodedWar_WithDuplicateDependencies-test-data/source]
+[INFO] Webapp assembled in [3 msecs]
+</system-out>
+  </testcase>
+</testsuite>
